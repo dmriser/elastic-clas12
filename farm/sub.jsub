@@ -1,0 +1,80 @@
+JOBNAME: clas12-analysis-dmriser 
+PROJECT: clas12
+TRACK: simulation 
+TIME: 180
+CPU: 1
+MEMORY: 2410 MB
+OS: CENTOS7
+COMMAND: chmod +x run.csh; ./run.csh
+OUTPUT_TEMPLATE:/volatile/clas12/dmriser/farm_out/elastic_jan24/data/10/* 
+
+OTHER_FILES: 
+/u/home/dmriser/analysis-projects-clas12/farm_scripts/run.csh
+
+INPUT_DATA:input.hipo
+OUTPUT_DATA:mon-rad.hipo
+INPUT_FILES:
+/work/clas12/rg-a/trains/v16_v2/skim8_ep/skim8_5032.hipo
+/work/clas12/rg-a/trains/v16_v2/skim8_ep/skim8_5036.hipo
+/work/clas12/rg-a/trains/v16_v2/skim8_ep/skim8_5038.hipo
+/work/clas12/rg-a/trains/v16_v2/skim8_ep/skim8_5039.hipo
+/work/clas12/rg-a/trains/v16_v2/skim8_ep/skim8_5040.hipo
+/work/clas12/rg-a/trains/v16_v2/skim8_ep/skim8_5041.hipo
+/work/clas12/rg-a/trains/v16_v2/skim8_ep/skim8_5043.hipo
+/work/clas12/rg-a/trains/v16_v2/skim8_ep/skim8_5045.hipo
+/work/clas12/rg-a/trains/v16_v2/skim8_ep/skim8_5046.hipo
+/work/clas12/rg-a/trains/v16_v2/skim8_ep/skim8_5047.hipo
+/work/clas12/rg-a/trains/v16_v2/skim8_ep/skim8_5051.hipo
+/work/clas12/rg-a/trains/v16_v2/skim8_ep/skim8_5052.hipo
+/work/clas12/rg-a/trains/v16_v2/skim8_ep/skim8_5053.hipo
+/work/clas12/rg-a/trains/v16_v2/skim8_ep/skim8_5116.hipo
+/work/clas12/rg-a/trains/v16_v2/skim8_ep/skim8_5117.hipo
+/work/clas12/rg-a/trains/v16_v2/skim8_ep/skim8_5119.hipo
+/work/clas12/rg-a/trains/v16_v2/skim8_ep/skim8_5120.hipo
+/work/clas12/rg-a/trains/v16_v2/skim8_ep/skim8_5124.hipo
+/work/clas12/rg-a/trains/v16_v2/skim8_ep/skim8_5125.hipo
+/work/clas12/rg-a/trains/v16_v2/skim8_ep/skim8_5126.hipo
+/work/clas12/rg-a/trains/v16_v2/skim8_ep/skim8_5127.hipo
+/work/clas12/rg-a/trains/v16_v2/skim8_ep/skim8_5128.hipo
+/work/clas12/rg-a/trains/v16_v2/skim8_ep/skim8_5129.hipo
+/work/clas12/rg-a/trains/v16_v2/skim8_ep/skim8_5130.hipo
+/work/clas12/rg-a/trains/v16_v2/skim8_ep/skim8_5138.hipo
+/work/clas12/rg-a/trains/v16_v2/skim8_ep/skim8_5139.hipo
+/work/clas12/rg-a/trains/v16_v2/skim8_ep/skim8_5153.hipo
+/work/clas12/rg-a/trains/v16_v2/skim8_ep/skim8_5158.hipo
+/work/clas12/rg-a/trains/v16_v2/skim8_ep/skim8_5159.hipo
+/work/clas12/rg-a/trains/v16_v2/skim8_ep/skim8_5160.hipo
+/work/clas12/rg-a/trains/v16_v2/skim8_ep/skim8_5162.hipo
+/work/clas12/rg-a/trains/v16_v2/skim8_ep/skim8_5163.hipo
+/work/clas12/rg-a/trains/v16_v2/skim8_ep/skim8_5164.hipo
+/work/clas12/rg-a/trains/v16_v2/skim8_ep/skim8_5165.hipo
+/work/clas12/rg-a/trains/v16_v2/skim8_ep/skim8_5166.hipo
+/work/clas12/rg-a/trains/v16_v2/skim8_ep/skim8_5167.hipo
+/work/clas12/rg-a/trains/v16_v2/skim8_ep/skim8_5168.hipo
+/work/clas12/rg-a/trains/v16_v2/skim8_ep/skim8_5169.hipo
+/work/clas12/rg-a/trains/v16_v2/skim8_ep/skim8_5180.hipo
+/work/clas12/rg-a/trains/v16_v2/skim8_ep/skim8_5181.hipo
+/work/clas12/rg-a/trains/v16_v2/skim8_ep/skim8_5182.hipo
+/work/clas12/rg-a/trains/v16_v2/skim8_ep/skim8_5183.hipo
+/work/clas12/rg-a/trains/v16_v2/skim8_ep/skim8_5190.hipo
+/work/clas12/rg-a/trains/v16_v2/skim8_ep/skim8_5196.hipo
+/work/clas12/rg-a/trains/v16_v2/skim8_ep/skim8_5197.hipo
+/work/clas12/rg-a/trains/v16_v2/skim8_ep/skim8_5198.hipo
+/work/clas12/rg-a/trains/v16_v2/skim8_ep/skim8_5199.hipo
+/work/clas12/rg-a/trains/v16_v2/skim8_ep/skim8_5200.hipo
+/work/clas12/rg-a/trains/v16_v2/skim8_ep/skim8_5201.hipo
+/work/clas12/rg-a/trains/v16_v2/skim8_ep/skim8_5202.hipo
+/work/clas12/rg-a/trains/v16_v2/skim8_ep/skim8_5203.hipo
+/work/clas12/rg-a/trains/v16_v2/skim8_ep/skim8_5204.hipo
+/work/clas12/rg-a/trains/v16_v2/skim8_ep/skim8_5205.hipo
+/work/clas12/rg-a/trains/v16_v2/skim8_ep/skim8_5206.hipo
+/work/clas12/rg-a/trains/v16_v2/skim8_ep/skim8_5208.hipo
+/work/clas12/rg-a/trains/v16_v2/skim8_ep/skim8_5211.hipo
+/work/clas12/rg-a/trains/v16_v2/skim8_ep/skim8_5212.hipo
+/work/clas12/rg-a/trains/v16_v2/skim8_ep/skim8_5252.hipo
+/work/clas12/rg-a/trains/v16_v2/skim8_ep/skim8_5253.hipo
+/work/clas12/rg-a/trains/v16_v2/skim8_ep/skim8_5257.hipo
+/work/clas12/rg-a/trains/v16_v2/skim8_ep/skim8_5258.hipo
+/work/clas12/rg-a/trains/v16_v2/skim8_ep/skim8_5259.hipo
+/work/clas12/rg-a/trains/v16_v2/skim8_ep/skim8_5261.hipo
+/work/clas12/rg-a/trains/v16_v2/skim8_ep/skim8_5262.hipo
