@@ -54,7 +54,8 @@ tighter_kin_bounds = [
     chi2:[0, 10],
     dc1:[-150,150],
     dc2:[-250,250],
-    dc3:[-350,350]
+    dc3:[-350,350],
+    cots:[0,20]
 ]
 
 lim = tighter_kin_bounds
@@ -94,6 +95,7 @@ histoBuilders2 = [
         x_q2             : { title -> limited_h2(title, 200, 200, lim.x, lim.q2) },
     theta_theta: { title -> limited_h2(title, 200, 200, lim.theta_egamma, lim.theta_gamma) },
     w_theta_sum : { title -> limited_h2(title, 200, 200, lim.w, lim.theta_sum) },
+    w_cots : { title -> limited_h2(title, 200, 200, lim.w, lim.cots) },
     dc1 : {title -> limited_h2(title, 200, 200, lim.dc1, lim.dc1)},
     dc2 : {title -> limited_h2(title, 200, 200, lim.dc2, lim.dc2)},
     dc3 : {title -> limited_h2(title, 200, 200, lim.dc3, lim.dc3)},
@@ -244,6 +246,9 @@ GParsPool.withPool 16, {
 		    def pass_missing_mass = pkin.missing_mass > cuts.missing_mass[0] && pkin.missing_mass < cuts.missing_mass[1]
 		    def pass_high_w = pkin.w > cuts.high_w[0]
 		    def pass_missing_mass_ftof = pkin.missing_mass > cuts.missing_mass_ftof[0] && pkin.missing_mass < cuts.missing_mass_ftof[1]
+
+		    def cots = PDGDatabase.getParticleMass(2212) * (1 / Math.tan(ele.theta()/2) / Math.tan(pro.theta()) - 1.0)
+		    histos.computeIfAbsent("w_cots_" + ctof,histoBuilders2.w_cots).fill(pkin.w, cots)
 
 		    histos.computeIfAbsent('w_angle_ep_' + ctof, histoBuilders2.w_angle_ep).fill(pkin.w, pkin.angle)
 
