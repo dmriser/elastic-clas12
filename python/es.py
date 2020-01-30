@@ -1247,3 +1247,48 @@ if __name__ == '__main__':
     root_garbage_can.append(line)
 
     can.Print('es_summary_sim_ctof_' + args.output_prefix + '.pdf')
+
+        # -----------------------------------------------------------
+    # Plot Angular Sum
+    # -----------------------------------------------------------
+    
+    can.Clear()
+    can.Divide(2,2)
+
+    can.cd(1)
+    histos['data']['histos_w_theta_sum_isr_CTOF'].Draw('colz')
+    gPad.SetLogz()
+    latex.DrawLatex(0.45, 0.02, 'W')
+    latex.SetTextAngle(90.0)
+    latex.DrawLatex(0.02, 0.4, '#theta_{e} + #theta_{p} (deg)')
+    latex.SetTextAngle(0.0)
+    latex.DrawLatex(0.3, 0.95, 'Data w/ Proton in CTOF (ISR)')
+
+    can.cd(2)
+    histos['data']['histos_w_theta_sum_isr_FTOF'].Draw('colz')
+    gPad.SetLogz()
+    latex.DrawLatex(0.45, 0.02, 'W')
+    latex.SetTextAngle(90.0)
+    latex.DrawLatex(0.02, 0.4, '#theta_{e} + #theta_{p} (deg)')
+    latex.SetTextAngle(0.0)
+    latex.DrawLatex(0.3, 0.95, 'Data w/ Proton in FTOF (ISR)')
+
+    can.cd(3)
+    histos['sim']['histos_w_theta_sum_fsr_CTOF'].Draw('colz')
+    gPad.SetLogz()
+    latex.DrawLatex(0.45, 0.02, 'W')
+    latex.SetTextAngle(90.0)
+    latex.DrawLatex(0.02, 0.4, '#theta_{e} + #theta_{p} (deg)')
+    latex.SetTextAngle(0.0)
+    latex.DrawLatex(0.3, 0.95, 'Data w/ Proton in CTOF (FSR)')
+
+    can.cd(4)
+    histos['sim']['histos_w_theta_sum_fsr_FTOF'].Draw('colz')
+    gPad.SetLogz()
+    latex.DrawLatex(0.45, 0.02, 'W')
+    latex.SetTextAngle(90.0)
+    latex.DrawLatex(0.02, 0.4, '#theta_{e} + #theta_{p} (deg)')
+    latex.SetTextAngle(0.0)
+    latex.DrawLatex(0.3, 0.95, 'Data w/ Proton in FTOF (FSR)')
+
+    can.Print('w_theta_sum_isr_and_fsr_' + args.output_prefix + '.pdf')
