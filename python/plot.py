@@ -33,7 +33,7 @@ if __name__ == "__main__":
         if '_w_' in name:
             detector, run = name.split('_')[-2:]        
             data[detector]['run'].append(run)
-            data[detector]['n'].append(hist.GetEntries())
+            data[detector]['n'].append(sum([hist.GetBinContent(i) for i in range(1,hist.GetNbinsX())]))
             data[detector]['mean'].append(hist.GetMean())
             data[detector]['std'].append(hist.GetStdDev())
             data[detector]['max'].append(hist.GetBinCenter(hist.GetMaximumBin()))
@@ -44,12 +44,12 @@ if __name__ == "__main__":
     
     can.Print('elastic.pdf]')
     
-    
+
     # Matplot 
     ylims = {}
-    ylims['n'] = [0,600]
-    ylims['mean'] = [0.7,1.3]
-    ylims['max'] = [0.7,1.3]
+    #ylims['n'] = [0,6000]
+    ylims['mean'] = [0.85,1.1]
+    ylims['max'] = [0.85,1.1]
     ylims['std'] = [0.0, 0.3]
 
     for dtype in data:
@@ -62,7 +62,10 @@ if __name__ == "__main__":
                 plt.ylabel(var)
                 plt.title(dtype + ":" + var)
                 plt.grid(alpha=0.2)
-                plt.ylim(ylims[var])
+                
+                if var in ylims:
+                    plt.ylim(ylims[var])
+
                 plt.savefig('timeline_' + dtype + '_' + var + '.pdf', 
                             bbox_inches='tight')
                 
